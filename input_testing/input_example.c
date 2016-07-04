@@ -13,6 +13,10 @@ char* get_str_input(){
 		}
 	}
 	char *ret=malloc(i);
+	if(ret==NULL){
+		printf("Malloc returned a null pointer, exiting...");
+		exit(1);
+	}
 	for(int j=0;j<i;j++){
 		ret[j]=input_var[j];
 	}
